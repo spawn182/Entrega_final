@@ -12,7 +12,7 @@ def crear_curso(request):
 # Create your views here.
 
 
-def listar_cursos(request):
+def listar_cursos2(request):
     cursos = Curso.objects.all()
     respuesta=""
     for curso in cursos:
