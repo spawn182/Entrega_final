@@ -1,0 +1,25 @@
+{% extends "AppCoder/padre.html" %}
+{% load static  %}
+{% block titulo %} Entregables {% endblock %}
+{% block contenido %}
+   
+    <h1>Registrar nueva entrega</h1>
+    
+
+
+    <form action="{% url 'entregables'  %}" method ="POST"> {% csrf_token %}
+        <table>
+        {{ formulario.as_table }}
+        </table>
+
+        <input type="submit" value="Agregar nuevo">
+
+    </form>
+
+        <h3>{{   mensaje }}</h3>
+
+    
+{% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %}
+{% load static  %}
+{% block titulo %}RESULTADOS BUSQUEDA POR COMISIÓN {% endblock %}
+{% block contenido %}
+
+
+{%   if cursos  %}
+    <h1>Resultados:</h1>
+
+    {%  for curso in cursos   %}
+
+        <h3>{{ curso.nombre}} - {{curso.comision}}</h3>
+   
+    {%  endfor  %}
+
+{%   else  %}
+    <h1> No se encontró ninguna comisión con ese número </h1>
+
+{%   endif  %}
+
+{% endblock %}

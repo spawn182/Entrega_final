@@ -1,0 +1,31 @@
+{% extends "AppCoder/padre.html" %}
+{% load static  %}
+{% block titulo %} Profesores {% endblock %}
+{% block contenido %}
+   
+    <h1>Registrar nuevo profesor</h1>
+    
+
+
+    <form action="{% url 'profesores'  %}" method ="POST"> {% csrf_token %}
+        <table>
+        {{ formulario.as_table }}
+        </table>
+
+        <input type="submit" value="Agregar nuevo">
+
+    </form>
+
+        <h3>{{   mensaje }}</h3>
+
+     <!--<ul>
+
+    {% for profe in profes %}
+       <li>{{ profe.nombre }} - {{ profe.apellido }} - {{ profe.profesion }}</li>
+    {% endfor %}
+
+    </ul> -->
+{% endblock %}
+    
+</body>
+</html>

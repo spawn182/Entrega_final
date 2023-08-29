@@ -1,0 +1,15 @@
+{% extends "AppCoder/padre.html" %}
+{% load static  %}
+{% block titulo %} Este es un formulario de cursos{% endblock %}
+{% block contenido %}
+    <h2> Crear curso  </h2>
+    <form action="{% url 'cursoFormulario'  %}" method ="POST"> {% csrf_token %}
+        
+        {{ formulario.as_p}}
+  
+        <input type="submit" value="Guardar curso">
+
+    </form>
+
+<h3> {{ mensaje }} </h3>
+{% endblock %}
